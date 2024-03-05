@@ -1,0 +1,787 @@
+@import "default";
+@import "blocks/header";
+@import "blocks/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-bottom: 10rem;
+  margin-top: 4rem;
+}
+
+.banner {
+  &__swiper {
+    .swiper-pagination-bullet-active {
+      background-color: white !important;
+    }
+    .swiper-pagination-bullet {
+      background-color: rgba(256, 256, 256, 0.95);
+      width: 6.3rem;
+      height: 0.7rem;
+      margin: 0 !important;
+      &:first-child {
+        border-radius: 1.2rem 0 0 1.2rem;
+      }
+      &:last-child {
+        border-radius: 0 1.2rem 1.2rem 0;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+      color: white;
+
+      @include media($notebook) {
+        display: block;
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - $headerMobileHeight);
+
+    @include media($notebook) {
+      height: calc(100vh - $headerNotebookHeight);
+    }
+
+    @include media($desktop) {
+      height: calc(100vh - $headerDesktopHeight);
+    }
+
+    &Image {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      max-width: 28.5rem;
+      gap: 2rem;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      margin-left: 11.09vw;
+
+      @include media($phone) {
+        max-width: 36rem;
+      }
+
+      @include media($tablet) {
+        gap: 3rem;
+      }
+
+      @include media($notebook) {
+        max-width: 45.5rem;
+        gap: 4rem;
+      }
+    }
+
+    &Category {
+      font-weight: 500;
+      font-size: 1.8rem;
+
+      @include media($tablet) {
+        font-size: 2.4rem;
+      }
+
+      @include media($notebook) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &Title {
+      font-weight: 800;
+      font-size: 4.2rem;
+
+      @include media($phone) {
+        font-size: 5rem;
+      }
+
+      @include media($tablet) {
+        font-size: 5.8rem;
+      }
+
+      @include media($notebook) {
+        font-size: 6.4rem;
+      }
+    }
+
+    &Description {
+      font-weight: 500;
+      font-size: 1.8rem;
+
+      @include media($tablet) {
+        font-size: 2.4rem;
+      }
+
+      @include media($notebook) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &Button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      border-radius: 0.8rem;
+      font-weight: 700;
+      color: #3C4242;
+      padding: 1.6rem 7.2rem;
+      width: fit-content;
+
+      font-size: 1.8rem;
+
+      @include media($tablet) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+.newarrival {
+
+  &__contentWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 2.2rem;
+    color: #3C4242;
+    display: none;
+    @include media($notebook) {
+      display: block;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    width: fit-content;
+
+    &Image {
+      width: 26.3rem;
+      height: 26.3rem;
+    }
+
+    &Title {
+      font-family: "Poppins", sans-serif;
+      color: #3C4242;
+      padding-left: 0.5rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
+
+}
+
+.sale {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 35.5rem;
+  //min-height: max(35.5rem, 40vh);
+  gap: 3rem;
+
+  &__card {
+    padding: 6.7rem 0 8rem 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    border-radius: 1.2rem;
+    color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    min-width: max(28rem, calc(50% - 1.5rem));
+    gap: 3rem;
+    overflow: hidden;
+
+    &Image {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Description {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    &TitleWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &Title {
+      font-size: 3.4rem;
+      font-weight: 800;
+    }
+
+    &Sale {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    &Link {
+      width: fit-content;
+      font-size: 2rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: #ffffff;
+      border-bottom: 1px solid #ffffff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.saving {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__block {
+    min-height: 39.3rem;
+    //height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1.2rem;
+    flex: 1;
+    min-width: max(28rem, calc(33% - 1.33rem));
+    position: relative;
+    overflow: hidden;
+
+    &Image {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &Content {
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+      justify-content: center;
+      height: 100%;
+    }
+
+    &Title {
+      font-weight: 600;
+      font-size: 2.8rem;
+      max-width: 15rem;
+    }
+
+    &Description {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    &Sale {
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    &Arrow {
+      font-size: 2.5rem;
+    }
+
+    &Button {
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 0.8rem 2rem;
+      border-radius: 0.8rem;
+      border: #fff solid 1px;
+      width: fit-content;
+    }
+
+    &ButtonWrapper {
+      width: fit-content;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      justify-content: center;
+    }
+
+    &DescriptionWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
+
+.advertising {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  min-height: 64rem;
+  height: 500px;
+  //height: 80vh;
+  //height: fit-content;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding: 18.3rem 5% 18.3rem 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+
+    @include media($tablet) {
+      width: 50%;
+    }
+
+    &Image {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Title {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 3.4rem;
+    }
+
+    &Description {
+      color: #ffffff;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    &Button {
+      color: #3C4242;
+      display: flex;
+      font-size: 1.8rem;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      border-radius: 0.8rem;
+      background-color: #ffffff;
+      padding: 1.2rem 4.4rem;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+
+    @include media($tablet) {
+      display: block;
+    }
+  }
+}
+
+.categories {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+    background: none;
+    border: none;
+    color: #3C4242;
+    font-size: 2.2rem;
+
+    &:after {
+      display: none;
+    }
+
+    @include media($notebook) {
+      display: block;
+    }
+  }
+
+  &__contentWrapper {
+    position: relative;
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: fit-content;
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      gap: 3.2rem;
+    }
+
+    &Photo {
+      max-width: 28.2rem;
+      border-radius: 1.2rem;
+    }
+
+    &Description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &Title {
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+
+      &Name {
+        font-size: 1.6rem;
+        max-width: 17rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $limelightNameColor;
+      }
+
+      &Subname {
+        font-size: 1.4rem;
+        color: $limelightBrandColor;
+      }
+    }
+
+    &Arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.8rem;
+      color: $limelightPriceColor;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 3rem;
+  gap: 3rem;
+  background-color: #3C4242;
+
+  @include media($notebook) {
+    gap: 7rem;
+    padding: 4rem 4rem 6rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+
+    font-size: 4.2rem;
+
+    @include media($phone) {
+      font-size: 5rem;
+    }
+  }
+
+  &__description {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    span {
+      color: #FBD103;
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include media($tablet) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__card {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+
+    @include media($tablet) {
+      width: 18rem;
+      height: 9rem;
+    }
+
+    &Image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.limelight {
+  &Prev,
+  &Next {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #3F4646;
+    &:after {
+      display: none;
+    }
+    @include media($tablet) {
+      display: block;
+    }
+  }
+
+  &__contentWrapper {
+    position: relative;
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  &__addToWishlistButton {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $limelightWishlistButtonBackground;
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    position: absolute;
+    top: 2.6rem;
+    right: 2rem;
+
+    i {
+      color: $limelightWishlistButtonColor;
+      font-size: 1.5rem;
+      margin-bottom: -0.3rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 28.2rem;
+
+    &contentWrapper {
+      width: 28.2rem;
+    }
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    &Photo {
+      max-width: 28.2rem;
+      border-radius: 1.2rem;
+    }
+
+    &Description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &Title {
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+
+      &Name {
+        font-size: 1.6rem;
+        max-width: 17rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $limelightNameColor;
+      }
+
+      &Brand {
+        font-size: 1.4rem;
+        color: $limelightBrandColor;
+      }
+    }
+
+    &Price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8.2rem;
+      height: 2.6rem;
+      border-radius: 0.8rem;
+      color: $limelightPriceColor;
+      background-color: $limelightPriceBackground;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.feedback {
+  position: relative;
+
+  .feedbackPrev,
+  .feedbackNext {
+    display: none;
+    background: none;
+    border: none;
+    color: #3C4242;
+    font-size: 2.2rem;
+
+    &::after {
+      display: none;
+    }
+
+    @include media($notebook) {
+      display: block;
+    }
+  }
+
+  &__contentWrapper {
+    position: relative;
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  &__swiper {
+    display: flex;
+    flex-direction: row;
+
+    .swiper-pagination-bullet {
+      margin: 0 0.2rem !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: black !important;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+
+    border-radius: 1rem;
+    border: 1.8px solid $feedbackBorder;
+    background: $feedbackBackground;
+
+    &Header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Photo {
+      width: 5.7rem;
+      height: 5.7rem;
+    }
+
+    &Rating {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+
+      i {
+        color: $feedbackRatingColor;
+        font-size: 2rem;
+      }
+    }
+
+    &Name {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: $sectionText;
+    }
+
+    &Text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $feedbackTextColor;
+    }
+  }
+}

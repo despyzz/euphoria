@@ -1,0 +1,230 @@
+@import "../vars";
+@import "../mixins";
+
+// для прилипающего хедера
+body {
+  position: relative;
+}
+
+.header {
+  z-index: 100;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  background-color: $headerBackground;
+  height: $headerMobileHeight;
+  border-bottom: #807D7E 1px solid;
+
+  @include media($notebook) {
+    height: $headerNotebookHeight;
+  }
+
+  @include media($desktop) {
+    height: $headerDesktopHeight;
+  }
+
+  &__logo {
+    display: none;
+
+    @include media($desktop) {
+      display: block;
+    }
+  }
+
+  &__contentWrapper {
+    max-width: 144rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 1.2rem;
+
+    @include media($phone) {
+      margin: 0 3vw;
+    }
+  }
+
+  &__buttons {
+    display: none;
+    flex-direction: row;
+    gap: 1.2rem;
+
+    @include media($tablet) {
+      display: flex;
+    }
+  }
+}
+
+@include media($notebook) {
+  #showHidden {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  color: $headerElementColor;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  &__element {
+    a {
+      text-decoration: none;
+      color: $headerElementColor;
+
+      &:hover {
+        color: #3C4242;
+      }
+    }
+  }
+
+  @include media($notebook) {
+    font-size: 2rem;
+    display: flex;
+  }
+
+  @include media($desktop) {
+    font-size: 2.2rem;
+    padding: 0 0 0 3vw;
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  gap: 1.2rem;
+  color: $headerElementColor;
+  background-color: $headerElementBackground;
+  border-radius: 0.8rem;
+  padding: 1.2rem 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media($notebook) {
+    max-width: 27rem;
+    margin: auto;
+  }
+
+  &__icon {
+    color: $headerElementColor;
+    font-size: 2rem;
+  }
+
+  &__input {
+    height: 2rem;
+    background-color: $headerElementBackground;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.button {
+  height: fit-content;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: $headerElementBackground;
+
+  i {
+    color: $headerElementColor;
+    font-size: 2rem;
+    padding: 1.2rem;
+  }
+}
+
+.hiddenContent {
+  position: absolute;
+  top: $headerMobileHeight;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - $headerMobileHeight);
+  background-color: rgba(256, 256, 256, 0.95);
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 3rem;
+
+  @include media($tablet) {
+    hr {
+      display: none;
+    }
+  }
+
+  & > * {
+    margin: 0 5%;
+  }
+
+  a {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    color: #3C4242;
+  }
+
+  @include media($notebook) {
+    display: none;
+  }
+
+  .hiddenButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include media($tablet) {
+      display: none;
+    }
+  }
+
+  .hiddenNav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+.hiddenContent {
+  animation: animatetop;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -30rem;
+    opacity: 0;
+  }
+  to {
+    top: $headerMobileHeight;
+    opacity: 1;
+
+    @include media($notebook) {
+      top: $headerNotebookHeight
+    }
+
+    @include media($desktop) {
+      top: $headerDesktopHeight
+    }
+  }
+}

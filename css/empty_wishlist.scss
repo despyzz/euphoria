@@ -1,0 +1,353 @@
+@import "default";
+@import "blocks/header";
+@import "blocks/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0;
+
+  @include media($notebook) {
+    flex-direction: row;
+    padding: 2rem 5vw 5rem;
+  }
+}
+
+.section {
+  @include media($notebook) {
+    margin: 0;
+  }
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin: 0 5vw;
+
+  @include media($notebook) {
+    margin: 0;
+  }
+}
+
+.menu {
+  min-width: 25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include media($tablet) {
+    gap: 4rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    color: #3C4242;
+    font-size: 28px;
+    font-weight: 600;
+
+    &::before {
+      display: block;
+      content: " ";
+      width: 6px;
+      height: 28px;
+      background-color: #8A33FD;
+      border-radius: 3px;
+    }
+  }
+
+  &__subtitle {
+    color: #807D7E;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    list-style: none;
+  }
+
+  &__element {
+    a {
+      display: flex;
+      gap: 1.5rem;
+      color: #807D7E;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 1rem 0 1rem 3.6rem;
+      cursor: pointer;
+    }
+
+    &--active {
+      background-color: #F6F6F6;
+      border-left: #3C4242 2px solid;
+    }
+  }
+}
+
+.title {
+  color: #3C4242;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33.5px; /* 119.643% */
+  letter-spacing: 0.56px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include media($tablet) {
+    gap: 3rem;
+  }
+
+  &__title {
+    color: #3C4242;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33.5px; /* 152.273% */
+    letter-spacing: 0.44px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .addresses__content {
+    gap: 2rem;
+  }
+}
+
+.banner {
+  max-width: 70rem;
+  height: fit-content;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05), -2px -2px 4px 0px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+
+  @include media($tablet) {
+    padding: 4rem 6rem;
+  }
+
+  @include media($desktop) {
+    padding: 8rem 12rem;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #F0F9F4;
+
+    i {
+      font-size: 68px;
+      color: #28A642;
+    }
+  }
+
+  &__text {
+    color: #3C4242;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  &__title {
+    color: #3C4242;
+    font-size: 28px;
+    font-weight: 600;
+
+    @include media($phone) {
+      font-size: 34px;
+    }
+  }
+
+  &__description {
+    color: #807D7E;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 124.7%; /* 19.952px */
+
+    @include media($phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    display: inline-flex;
+    padding: 12px 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #8A33FD;
+
+    @include media($phone) {
+      font-size: 18px;
+    }
+  }
+
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.similar {
+  max-width: 144rem;
+  width: 100%;
+  align-self: center;
+  padding: 0 5vw 3rem;
+  &__contentWrapper {
+    position: relative;
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 28.2rem;
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    &__PhotoWrapper {
+      position: relative;
+      max-width: 28.2rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__Photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &Title {
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+
+      &Name {
+        font-size: 1.6rem;
+        max-width: 17rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $limelightNameColor;
+      }
+
+      &Brand {
+        font-size: 1.4rem;
+        color: $limelightBrandColor;
+      }
+    }
+
+    &Price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8.2rem;
+      height: 2.6rem;
+      border-radius: 0.8rem;
+      color: $limelightPriceColor;
+      background-color: $limelightPriceBackground;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #3F4646;
+    &:after {
+      display: none;
+    }
+    @include media($notebook) {
+      display: block;
+    }
+  }
+
+
+
+  &__addToWishlistButton {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $limelightWishlistButtonBackground;
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 2.6rem;
+    right: 2rem;
+
+    i {
+      color: $limelightWishlistButtonColor;
+      font-size: 1.5rem;
+      margin-bottom: -0.3rem;
+    }
+  }
+}

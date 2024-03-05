@@ -1,0 +1,650 @@
+@import "default";
+@import "blocks/header";
+@import "blocks/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-bottom: 10rem;
+}
+
+.product {
+
+  &__contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include media($notebook) {
+      flex-direction: row;
+    }
+  }
+
+  &__photos {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 55rem;
+    max-height: 785px;
+    gap: 3rem;
+    position: relative;
+    margin-top: 3rem;
+
+    @include media($notebook) {
+      align-self: normal;
+      margin-top: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+      @include media($notebook) {
+        max-width: none;
+        display: block;
+      }
+      color: #3C4242;
+      font-size: 2rem;
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      top: 25%;
+      left: 10%;
+      transform: translate(-50%, -50%)
+    }
+
+    .swiper-button-next {
+      top: 84%;
+      left: 10%;
+      transform: translate(-50%, -50%)
+    }
+
+    @include media($phone) {
+      flex-direction: row-reverse;
+    }
+
+    @include media($notebook) {
+      width: 50%;
+    }
+
+    .gallery-top {
+      width: 100%;
+      //height: 100%;
+      
+      @include media($phone) {
+        width: 80%;
+      }
+
+      .swiper-wrapper {
+        height: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+
+        .img-wrapper {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .thumbs-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .gallery-thumbs {
+      align-self: center;
+      width: 100%;
+      height: 120px;
+
+      position: relative;
+
+      @include media($phone) {
+        width: 20%;
+        height: 60vh;
+        max-height: 400px;
+      }
+
+      .swiper-wrapper {
+        width: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-wrapper {
+          width: 100%;
+          height: 100%;
+          margin: 5px;
+          border-radius: 0.8rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-active {
+          .img-wrapper {
+            margin: 0;
+            padding: 4px;
+            border: black 1px solid;
+            border-radius: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    width: 100%;
+
+    @include media($notebook) {
+      width: 50%;
+    }
+
+    &Category {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: center;
+      color: #807D7E;
+
+      &Item {
+        font-size: 1.6rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+      }
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+
+    &Title {
+      font-size: 3.4rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      line-height: 140%;
+      color: #3C4242;
+      //max-width: 60%;
+      min-width: 28rem;
+    }
+
+    &Feedback {
+      display: flex;
+      flex-direction: row;
+      gap: 2.85rem;
+
+      &Rating {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+
+        &Stars {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          color: #EDD146;
+          font-size: 1.4rem;
+        }
+
+        &Number {
+          color: #807D7E;
+          font-weight: 500;
+          font-size: 1.8rem;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+
+      &Comments {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+        color: #807D7E;
+
+        &Icon {
+          font-size: 1.4rem;
+        }
+
+        &Count,
+        &Text {
+          font-size: 1.8rem;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+        }
+
+        &Text {
+          display: none;
+          @include media($phone) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &SizeSelector {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      &Header {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        &Title {
+          color: #3F4646;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+
+        &Guide {
+          color: #807D7E;
+          font-weight: 500;
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+          align-items: center;
+
+          &Text {
+            font-size: 1.8rem;
+          }
+
+          &Icon {
+            font-size: 1.4rem;
+          }
+
+          * {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &Options {
+        display: flex;
+        flex-direction: row;
+        gap: 2.4rem;
+
+        &Item {
+          width: 3.8rem;
+          height: 3.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.2rem;
+          border: 1.5px solid #BEBCBD;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &ColorSelector {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+
+      &Title {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.8rem;
+        color: #3F4646;
+        font-weight: 600;
+      }
+
+      &Options {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        &Item {
+          margin: 0.4rem;
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          cursor: pointer;
+          color: #3F4646;
+        }
+      }
+    }
+
+    &AddToCart {
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+      font-family: "Poppins", sans-serif;
+
+      &Button {
+        cursor: pointer;
+        padding: 1.2rem 4rem;
+        color: #fff;
+        border: none;
+        background-color: #8A33FD;
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        align-items: center;
+        justify-content: center;
+        &Icon {
+
+        }
+
+        &Text {
+          display: none;
+          @include media($phone) {
+            display: block;
+          }
+        }
+      }
+
+      &Price {
+        padding: 1.2rem 4rem;
+        color: #3C4242;
+        border: #3C4242 solid 1px;
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    &Separator {
+      width: 100%;
+      height: 1px;
+      background: #BEBCBD;
+    }
+
+    &Tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      @include media($phone) {
+        column-gap: 5rem;
+      }
+
+      @include media($tablet) {
+        column-gap: 7rem;
+      }
+
+      &Item {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+
+        &Icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 4.4rem;
+          height: 4.4rem;
+          border-radius: 50%;
+          color: #3C4242;
+          background-color: #F6F6F6;
+          font-size: 1.8rem;
+        }
+
+        &Text {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.8rem;
+          font-weight: 500;
+          color: #3C4242;
+        }
+      }
+    }
+  }
+}
+
+.similar {
+  &__contentWrapper {
+    position: relative;
+    @include media($notebook) {
+      padding: 0 5rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 28.2rem;
+
+    &Content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    &__PhotoWrapper {
+      position: relative;
+      max-width: 28.2rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__Photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &Description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &Title {
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+
+      &Name {
+        font-size: 1.6rem;
+        max-width: 17rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $limelightNameColor;
+      }
+
+      &Brand {
+        font-size: 1.4rem;
+        color: $limelightBrandColor;
+      }
+    }
+
+    &Price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8.2rem;
+      height: 2.6rem;
+      border-radius: 0.8rem;
+      color: $limelightPriceColor;
+      background-color: $limelightPriceBackground;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #3F4646;
+    &:after {
+      display: none;
+    }
+    @include media($notebook) {
+      display: block;
+    }
+  }
+
+
+
+  &__addToWishlistButton {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $limelightWishlistButtonBackground;
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 2.6rem;
+    right: 2rem;
+
+    i {
+      color: $limelightWishlistButtonColor;
+      font-size: 1.5rem;
+      margin-bottom: -0.3rem;
+    }
+  }
+}
+
+.description {
+  &__contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include media($tablet) {
+      flex-direction: row;
+      gap: 7rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+
+    @include media($tablet) {
+      width: calc(60% - 3rem);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    p {
+      color: #807D7E;
+
+      span {
+        color: #3F4646;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__table {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1.2rem;
+    gap: 1px;
+    background-color: #BEBCBD;
+    width: 100%;
+
+
+    &Item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      //width: fit-content;
+      flex: 1;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.6rem;
+      min-width: max(33%, 20rem);
+      padding: 2rem 3rem;
+      background-color: #F6F6F6;
+
+      &Name {
+        width: fit-content;
+        color: #807D7E;
+        font-weight: 400;
+      }
+
+      &Content {
+        width: fit-content;
+        color: #3C4242;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__video {
+    border-radius: 1.2rem;
+    overflow: hidden;
+    max-width: 100%;
+    flex: 1;
+
+    @include media($tablet) {
+      max-width: 40%;
+    }
+
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+}

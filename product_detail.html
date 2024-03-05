@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+  <link rel="stylesheet"
+        href="css/product_detail.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__contentWrapper">
+    <a href="#">
+      <img src="images/logo.svg"
+           alt="Euphoria logo."
+           class="logo header__logo"
+      >
+    </a>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__element">
+          <a href="#">
+            Shop
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Men
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Women
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Combos
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Joggers
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <label class="search">
+      <i class="search__icon fa-solid fa-magnifying-glass"></i>
+
+      <input type="text"
+             placeholder="Search"
+             class="search__input"
+      >
+    </label>
+
+    <div class="header__buttons">
+
+      <a href="#"
+         class="wishlist-button button"
+      >
+        <i class="fa-regular fa-heart"></i>
+      </a>
+
+      <a href="#"
+         class="profile-button button"
+      >
+        <i class="fa-regular fa-user"></i>
+      </a>
+
+      <a href="#"
+         class="cart-button button"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+
+    </div>
+
+    <button id="showHidden" class="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="hiddenContent" class="hiddenContent">
+
+      <div id="hiddenButtons" class="hiddenButtons">
+        <a href="#">
+          Wishlist
+        </a>
+
+        <a href="#">
+          Profile
+        </a>
+
+        <a href="#">
+          Cart
+        </a>
+      </div>
+
+      <hr>
+
+      <nav id="hiddenNav" class="hiddenNav">
+        <ul class="hiddenNav__list">
+          <li class="hiddenNav__element">
+            <a href="#">
+              Shop
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Men
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Women
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Combos
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Joggers
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </nav>
+
+  </div>
+</header>
+
+<main>
+  <section class="section product">
+    <div class="product__contentWrapper">
+
+      <div class="product__photos">
+
+        <div class="swiper gallery-top">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="swiper gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="img-wrapper">
+                <img src="images/in_the_limelight.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev thumbsPrev">
+          <i class="fa-solid fa-circle-arrow-up"></i>
+        </div>
+
+        <div class="swiper-button-next thumbsNext">
+          <i class="fa-solid fa-circle-arrow-down"></i>
+        </div>
+
+      </div>
+
+      <div class="product__info">
+
+        <div class="product__infoCategory">
+          <div class="product__infoCategoryItem">
+            Shop
+          </div>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <div class="product__infoCategoryItem">
+            Women
+          </div>
+
+          <i class="fa-solid fa-chevron-right"></i>
+
+          <div class="product__infoCategoryItem">
+            Top
+          </div>
+        </div>
+
+        <div class="product__infoTitle">
+          Raven Hoodie With Black colored Design
+        </div>
+
+        <div class="product__infoFeedback">
+          <div class="product__infoFeedbackRating">
+
+            <div class="product__infoFeedbackRatingStars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="product__infoFeedbackRatingNumber">
+              3.5
+            </div>
+
+          </div>
+
+          <div class="product__infoFeedbackComments">
+
+            <div class="product__infoFeedbackCommentsIcon">
+              <i class="fa-regular fa-message"></i>
+            </div>
+
+            <div class="product__infoFeedbackCommentsCount">
+              120
+            </div>
+
+            <div class="product__infoFeedbackCommentsText">
+              comments
+            </div>
+
+          </div>
+        </div>
+
+        <div class="product__infoSizeSelector">
+          <div class="product__infoSizeSelectorHeader">
+
+            <div class="product__infoSizeSelectorHeaderTitle">
+              Select Size
+            </div>
+
+            <div class="product__infoSizeSelectorHeaderGuide">
+
+              <div class="product__infoSizeSelectorHeaderGuideText">
+                Size Guide
+              </div>
+
+              <div class="product__infoSizeSelectorHeaderGuideIcon">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product__infoSizeSelectorOptions">
+            <div class="product__infoSizeSelectorOptionsItem">
+              XS
+            </div>
+
+            <div class="product__infoSizeSelectorOptionsItem">
+              XS
+            </div>
+
+            <div class="product__infoSizeSelectorOptionsItem">
+              XS
+            </div>
+
+            <div class="product__infoSizeSelectorOptionsItem">
+              XS
+            </div>
+
+            <div class="product__infoSizeSelectorOptionsItem">
+              XS
+            </div>
+          </div>
+        </div>
+
+        <div class="product__infoColorSelector">
+          <div class="product__infoColorSelectorTitle">
+            Colours Available
+          </div>
+
+          <div class="product__infoColorSelectorOptions">
+
+            <div class="product__infoColorSelectorOptionsItem"
+                 style="background-color: purple;">
+            </div>
+
+            <div class="product__infoColorSelectorOptionsItem"
+                 style="background-color: purple;">
+            </div>
+
+            <div class="product__infoColorSelectorOptionsItem"
+                 style="background-color: purple;">
+            </div>
+
+            <div class="product__infoColorSelectorOptionsItem"
+                 style="background-color: purple;">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="product__infoAddToCart">
+
+          <button class="product__infoAddToCartButton">
+
+            <div class="product__infoAddToCartButtonIcon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <div class="product__infoAddToCartButtonText">
+              Add to cart
+            </div>
+
+          </button>
+
+          <div class="product__infoAddToCartPrice">
+            $63.00
+          </div>
+        </div>
+
+        <div class="product__infoSeparator"></div>
+
+        <div class="product__infoTags">
+
+          <div class="product__infoTagsItem">
+
+            <div class="product__infoTagsItemIcon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <div class="product__infoTagsItemText">
+              Size & Fit
+            </div>
+
+          </div>
+
+          <div class="product__infoTagsItem">
+
+            <div class="product__infoTagsItemIcon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <div class="product__infoTagsItemText">
+              Size & Fit
+            </div>
+
+          </div>
+
+          <div class="product__infoTagsItem">
+
+            <div class="product__infoTagsItemIcon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <div class="product__infoTagsItemText">
+              Size & Fit
+            </div>
+
+          </div>
+
+          <div class="product__infoTagsItem">
+
+            <div class="product__infoTagsItemIcon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+
+            <div class="product__infoTagsItemText">
+              Size & Fit
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section description">
+    <div class="section__title">
+      <div class="section__titleMarker"></div>
+
+      <div class="section__titleText">
+        Product Description
+      </div>
+    </div>
+
+    <div class="description__contentWrapper">
+
+      <div class="description__content">
+        <div class="description__text">
+          <p>
+            100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched
+            with no pilling & no fading. Provide all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD
+            prints.
+          </p>
+        </div>
+
+        <div class="description__table">
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+
+          <div class="description__tableItem">
+            <div class="description__tableItemName">
+              Fabric
+            </div>
+
+            <div class="description__tableItemContent">
+              Bio-washed Cotton
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="description__video"
+         data-fancybox="gallery"
+         data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        <img class="description__videoPreview" src="images/video-preview.jpg" alt=""/>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section similar">
+    <div class="section__title">
+      <div class="section__titleMarker"></div>
+
+      <div class="section__titleText">
+        Similar Products
+      </div>
+    </div>
+
+    <div class="similar__contentWrapper">
+
+      <div class="swiper similar__swiper">
+        <div class="swiper-wrapper">
+
+          <a href="#" class="swiper-slide similar__block">
+            <div class="similar__blockContent">
+              <div class="similar__blockContentPhotoWrapper">
+                <div class="similar__addToWishlistButton">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img class="similar__blockContentPhoto"
+                     src="images/in_the_limelight.jpg"
+                     alt="Similar product photo"
+                >
+              </div>
+
+              <div class="similar__blockDescription">
+                <div class="similar__blockTitle">
+                  <div class="similar__blockTitleName">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div>
+
+                  <div class="similar__blockTitleBrand">
+                    Jhanvi’s Brand
+                  </div>
+                </div>
+
+                <div class="similar__blockPrice">
+                  $123.00
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="swiper-slide similar__block">
+            <div class="similar__blockContent">
+              <div class="similar__blockContentPhotoWrapper">
+                <div class="similar__addToWishlistButton">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img class="similar__blockContentPhoto"
+                     src="images/in_the_limelight.jpg"
+                     alt="Similar product photo"
+                >
+              </div>
+
+              <div class="similar__blockDescription">
+                <div class="similar__blockTitle">
+                  <div class="similar__blockTitleName">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div>
+
+                  <div class="similar__blockTitleBrand">
+                    Jhanvi’s Brand
+                  </div>
+                </div>
+
+                <div class="similar__blockPrice">
+                  $123.00
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="swiper-slide similar__block">
+            <div class="similar__blockContent">
+              <div class="similar__blockContentPhotoWrapper">
+                <div class="similar__addToWishlistButton">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img class="similar__blockContentPhoto"
+                     src="images/in_the_limelight.jpg"
+                     alt="Similar product photo"
+                >
+              </div>
+
+              <div class="similar__blockDescription">
+                <div class="similar__blockTitle">
+                  <div class="similar__blockTitleName">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div>
+
+                  <div class="similar__blockTitleBrand">
+                    Jhanvi’s Brand
+                  </div>
+                </div>
+
+                <div class="similar__blockPrice">
+                  $123.00
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="swiper-slide similar__block">
+            <div class="similar__blockContent">
+              <div class="similar__blockContentPhotoWrapper">
+                <div class="similar__addToWishlistButton">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img class="similar__blockContentPhoto"
+                     src="images/in_the_limelight.jpg"
+                     alt="Similar product photo"
+                >
+              </div>
+
+              <div class="similar__blockDescription">
+                <div class="similar__blockTitle">
+                  <div class="similar__blockTitleName">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div>
+
+                  <div class="similar__blockTitleBrand">
+                    Jhanvi’s Brand
+                  </div>
+                </div>
+
+                <div class="similar__blockPrice">
+                  $123.00
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="swiper-slide similar__block">
+            <div class="similar__blockContent">
+              <div class="similar__blockContentPhotoWrapper">
+                <div class="similar__addToWishlistButton">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <img class="similar__blockContentPhoto"
+                     src="images/in_the_limelight.jpg"
+                     alt="Similar product photo"
+                >
+              </div>
+
+              <div class="similar__blockDescription">
+                <div class="similar__blockTitle">
+                  <div class="similar__blockTitleName">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </div>
+
+                  <div class="similar__blockTitleBrand">
+                    Jhanvi’s Brand
+                  </div>
+                </div>
+
+                <div class="similar__blockPrice">
+                  $123.00
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="swiper-scrollbar similarScrollbar"></div>
+
+      <button class="swiper-button-prev similarPrev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <button class="swiper-button-next similarNext">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="footer__content-wrapper">
+    <div class="footer__contentMobile">
+      <div class="footer__columns">
+        <div class="footer__block">
+          <div class="footer__title">
+            Need help
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            Company
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">euphoria Blog</a></li>
+            <li><a href="#">euphoriastan</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            More Info
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Term and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__contentDesktop">
+      <div class="footer__block">
+        <div class="footer__title">
+          Need help
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Company
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">euphoria Blog</a></li>
+          <li><a href="#">euphoriastan</a></li>
+          <li><a href="#">Collaboration</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          More Info
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Term and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__popularCategories">
+      <div class="footer__title">
+        Popular Categories
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="footer__copyright">
+      Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+    </div>
+  </div>
+
+</footer>
+
+<script src="https://kit.fontawesome.com/fed00610f6.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<script defer src="js/swiper.js"></script>
+<script defer src="js/fancybox.js"></script>
+<script defer src="js/header.js"></script>
+<script defer src="js/productDetail.js"></script>
+
+</body>
+</html>

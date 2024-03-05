@@ -1,0 +1,195 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+.selectable {
+  -webkit-user-select: text; /* Chrome/Safari/Opera */
+  -moz-user-select: text; /* Firefox */
+  -ms-user-select: text; /* Internet Explorer/Edge */
+  user-select: text; /* Non-prefixed version, currently not supported by any browser */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+
+.swiper-scrollbar {
+  bottom: -1rem !important;
+
+  @include media($notebook) {
+    display: none;
+  }
+}
+
+.swiper-wrapper {
+  width: fit-content;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.button {
+  cursor: pointer;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.card {
+  border-radius: 1.2rem;
+  margin: 0 5vw;
+}
+
+.section {
+  margin: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include media($tablet) {
+    gap: 3rem;
+  }
+
+  @include media($notebook) {
+    gap: 5rem;
+  }
+
+  @include media($desktop) {
+    gap: 7rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    &Marker {
+      display: none;
+      //width: 6px;
+      //border-radius: 0.3rem;
+      //margin: 0.3rem 0;
+      //background-color: $sectionMarker;
+    }
+
+    &Text {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      color: $sectionText;
+      font-family: "Poppins", sans-serif;
+      font-size: 2.4rem;
+
+      &::before {
+        content: " ";
+        display: inline-block;
+        width: 6px;
+        height: 88%;
+        border-radius: 0.3rem;
+        //margin: 0.3rem 0;
+        background-color: $sectionMarker;
+      }
+
+      @include media($tablet) {
+        font-size: 2.8rem;
+      }
+
+      @include media($notebook) {
+        font-size: 3.1rem;
+      }
+
+      @include media($desktop) {
+        font-size: 3.4rem;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+main {
+  max-width: 144rem;
+  width: 100%;
+  align-self: center;
+}
+
+
+.path {
+  align-self: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 2rem 5vw 0;
+  font-family: "Poppins", sans-serif;
+  color: #807D7E;
+  display: flex;
+  gap: 1.5rem;
+
+  &__element {
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:last-child {
+      color: #3C4242;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__icon {
+    font-size: 16px;
+    color: #3C4242;
+
+    &-container {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: #BEBCBD solid 1px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    color: #3C4242;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

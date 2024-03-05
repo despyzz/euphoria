@@ -1,0 +1,166 @@
+@import "../vars";
+@import "../mixins";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $footerBackground;
+
+  &__content-wrapper {
+    align-self: center;
+    max-width: 144rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: $footerElementsColor;
+    padding: 2rem min(5rem, 5vw);
+  }
+
+  @include media($notebook) {
+    padding: 5rem;
+  }
+
+  &__contentMobile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    column-gap: 1.5rem;
+
+    @include media($notebook) {
+      display: none;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+
+    @include media($phone) {
+      flex-direction: row;
+    }
+  }
+
+  &__contentDesktop {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    column-gap: 1.5rem;
+
+    @include media($notebook) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1.5fr;
+      grid-template-rows: auto auto;
+      padding: 0 min(80px, 4vw);
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include media($notebook) {
+      text-align: start;
+      //font-size: 2.8rem;
+    }
+  }
+
+  &__block {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      list-style: none;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+
+      @include media($notebook) {
+        gap: 1.8rem;
+        //font-size: 1.8rem;
+        text-align: start;
+      }
+    }
+  }
+
+  &__socialLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: end;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include media($notebook) {
+      justify-content: start;
+      grid-column: 1 / 4;
+    }
+  }
+
+  &__downloadLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.1rem;
+
+    @include media($notebook) {
+      grid-column: 4 / -1;
+      justify-content: start;
+    }
+
+    .footer__title {
+      display: none;
+      flex: 1 0 100%;
+
+      @include media($notebook) {
+        display: block;
+      }
+    }
+  }
+
+  &__popularCategories {
+    cursor: pointer;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem min(80px, 4vw);
+    border: 1px solid #BEBCBD;
+    border-right: none;
+    border-left: none;
+
+    @include media($notebook) {
+      display: flex;
+      grid-row-start: -2;
+      grid-column: 1 / -1;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  &__copyright {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    @include media($notebook) {
+      font-size: 1.8rem;
+      grid-row-start: -1;
+      grid-column: 1 / -1;
+    }
+  }
+
+  a {
+    color: $footerElementsColor;
+  }
+}

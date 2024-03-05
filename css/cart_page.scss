@@ -1,0 +1,433 @@
+@import "default";
+@import "blocks/header";
+@import "blocks/footer";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 2rem;
+
+  @include media($tablet) {
+    margin-top: 3.5rem;
+  }
+
+  @include media($notebook) {
+    margin-top: 5rem;
+  }
+}
+
+.section {
+  font-family: "Poppins", sans-serif;
+  color: #807D7E;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .path {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+
+    &__element {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    a {
+      color: #8A33FD;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+
+  &__wrapper {
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .table__header {
+    display: none;
+
+    position: sticky;
+    top: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #3C4242;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    @include media($tablet) {
+      display: table-row;
+    }
+
+    th {
+      padding: 2.6rem 0;
+    }
+  }
+
+  .table__item {
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    font-family: "Poppins", sans-serif;
+    padding: 0 5vw;
+
+    @include media($tablet) {
+      display: table-row;
+      padding: 0;
+    }
+
+    &::after {
+      display: block;
+      content: " ";
+      grid-column: 1 / -1;
+      width: 100%;
+      height: 2px;
+      background-color: #BEBCBD;
+      margin-bottom: 3rem;
+
+      @include media($tablet) {
+        display: none;
+      }
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &Details {
+      display: block;
+      grid-row: 1;
+      grid-column: 1 / -1;
+
+      @include media($tablet) {
+        display: table-cell;
+      }
+    }
+
+    &Price {
+      display: none;
+      color: #3C4242;
+      font-size: 1.6rem;
+      font-weight: 700;
+
+      @include media($tablet) {
+        display: table-cell;
+      }
+    }
+
+    &Quantity {
+      place-self: center;
+    }
+
+    &Shipping {
+      display: none;
+      color: #BEBCBD;
+      font-size: 1.6rem;
+      font-weight: 700;
+
+      @include media($tablet) {
+        display: table-cell;
+      }
+    }
+
+    &Subtotal {
+      color: #3C4242;
+      font-size: 1.6rem;
+      font-weight: 700;
+      place-self: center;
+    }
+
+    &Action {
+      grid-column: 1 / -1;
+      place-self: center;
+    }
+  }
+
+  @include media($tablet) {
+    th, td {
+      text-align: center;
+      width: 12%;
+
+      &:first-child {
+        width: 40%;
+        padding-left: 5vw;
+        text-align: start;
+      }
+
+      &:last-child {
+        padding-right: 5vw;
+      }
+    }
+
+    td {
+      padding: 3rem 0;
+      border-bottom: 1px solid #3C4242;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  &__photo {
+    width: 10.5rem;
+    height: 12rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &Title {
+      color: #3C4242;
+      font-size: 1.6rem;
+    }
+
+    &Description {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: #807D7E;
+      font-size: 1.2rem;
+      text-align: start;
+    }
+  }
+}
+
+.quantity {
+  display: flex;;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    gap: 1.6rem;
+    padding: 1.1rem 2.3rem;
+    background-color: #F6F6F6;
+    width: fit-content;
+    border-radius: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  &__count {
+    outline: none;
+    border: none;
+    background: none;
+    width: 2rem;
+    text-align: center;
+  }
+
+  &__decrease,
+  &__increase {
+    cursor: pointer;
+  }
+}
+
+.actions {
+  text-align: center;
+
+  &__delete {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 1.4rem;
+
+      @include media($tablet) {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.discount {
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  padding: 2rem 5vw;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  @include media(907px) {
+    justify-content: space-between;
+  }
+
+  .codes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Poppins", sans-serif;
+
+    align-items: center;
+    text-align: center;
+
+    @include media(907px) {
+      align-items: start;
+      text-align: start;
+    }
+
+    @include media($phone) {
+      gap: 3rem;
+    }
+
+    @include media($notebook) {
+      gap: 4rem;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__title {
+      color: #3C4242;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      color: #807D7E;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &__coupon {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      input {
+        outline: none;
+        cursor: pointer;
+        font-size: 1.6rem;
+        padding: 1.2rem 2rem;
+        border: 1px #807D7E solid;
+        border-radius: 1.2rem;
+      }
+      button {
+        color: #FFFFFF;
+        background-color: #8A33FD;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 1.2rem 3rem;
+        border: 1px #807D7E solid;
+        border-radius: 1.2rem;
+      }
+    }
+
+    &__continue {
+      width: fit-content;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      background-color: #fff;
+      border: #8A8989 1px solid;
+      border-radius: 1.2rem;
+      padding: 1.2rem 5rem;
+    }
+  }
+
+  .checkout {
+    align-items: center;
+    min-width: 28rem;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+
+    & > * {
+      padding: 0 3rem;
+      width: 100%;
+
+      @include media($tablet) {
+        padding: 0 9rem;
+      }
+    }
+
+    & > hr {
+      padding: 0;
+      width: 100%;
+    }
+
+    .checkout__sub {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sub-total,
+    .shipping {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.6rem;
+      color: #3C4242;
+    }
+
+    .checkout__grand {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 1.6rem;
+      color: #3C4242;
+      font-weight: 700;
+      gap: 5rem;
+    }
+
+    .proceed {
+      background-color: #8A33FD;
+      color: #FFFFFF;
+      padding: 1.2rem 3rem;
+      border-radius: 1.2rem;
+      border: 1px solid #807D7E;
+      font-size: 1.6rem;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+  }
+}

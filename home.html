@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__contentWrapper">
+        <a href="#">
+            <img src="images/logo.svg"
+                 alt="Euphoria logo."
+                 class="logo header__logo"
+            >
+        </a>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__element">
+                    <a href="#">
+                        Shop
+                    </a>
+                </li>
+
+                <li class="nav__element">
+                    <a href="#">
+                        Men
+                    </a>
+                </li>
+
+                <li class="nav__element">
+                    <a href="#">
+                        Women
+                    </a>
+                </li>
+
+                <li class="nav__element">
+                    <a href="#">
+                        Combos
+                    </a>
+                </li>
+
+                <li class="nav__element">
+                    <a href="#">
+                        Joggers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <label class="search">
+            <i class="search__icon fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+                   placeholder="Search"
+                   class="search__input"
+            >
+        </label>
+
+        <div class="header__buttons">
+
+            <a href="#"
+               class="wishlist-button button"
+            >
+                <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <a href="#"
+               class="profile-button button"
+            >
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="#"
+               class="cart-button button"
+            >
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+        </div>
+
+        <button id="showHidden" class="button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="hiddenContent" class="hiddenContent">
+
+            <div id="hiddenButtons" class="hiddenButtons">
+                <a href="#">
+                    Wishlist
+                </a>
+
+                <a href="#">
+                    Profile
+                </a>
+
+                <a href="#">
+                    Cart
+                </a>
+            </div>
+
+            <hr>
+
+            <nav id="hiddenNav" class="hiddenNav">
+                <ul class="hiddenNav__list">
+                    <li class="hiddenNav__element">
+                        <a href="#">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li class="hiddenNav__element">
+                        <a href="#">
+                            Men
+                        </a>
+                    </li>
+
+                    <li class="hiddenNav__element">
+                        <a href="#">
+                            Women
+                        </a>
+                    </li>
+
+                    <li class="hiddenNav__element">
+                        <a href="#">
+                            Combos
+                        </a>
+                    </li>
+
+                    <li class="hiddenNav__element">
+                        <a href="#">
+                            Joggers
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </nav>
+
+    </div>
+</header>
+
+<section class="banner">
+    <div class="swiper banner__swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide banner__block">
+                <img src="images/home_banner.jpg" alt="" class="banner__blockImage" loading="lazy">
+                <div class="banner__blockContent">
+                    <div class="banner__blockCategory">
+                        T-shirt / Tops
+                    </div>
+                    <div class="banner__blockTitle">
+                        Summer Value Pack
+                    </div>
+                    <div class="banner__blockDescription">
+                        cool / colorful / comfy
+                    </div>
+                    <a href="#">
+                        <div class="banner__blockButton button">
+                            Shop Now
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide banner__block">
+                <img src="images/home_banner.jpg" alt="" class="banner__blockImage" loading="lazy">
+                <div class="banner__blockContent"></div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<main>
+
+    <section class="section sale">
+        <div class="sale__card">
+            <img src="images/sale.jpg" alt="" class="sale__cardImage" loading="lazy">
+            <div class="sale__cardDescription">
+                Low Price
+            </div>
+            <div class="sale__cardTitleWrapper">
+                <div class="sale__cardTitle">
+                    High Coziness
+                </div>
+                <div class="sale__cardSale">
+                    UPTO 50% OFF
+                </div>
+            </div>
+            <a class="sale__cardLink" href="#">
+                Explore Items
+            </a>
+        </div>
+        <div class="sale__card">
+            <img src="images/sale.jpg" alt="" class="sale__cardImage" loading="lazy">
+            <div class="sale__cardDescription">
+                Low Price
+            </div>
+            <div class="sale__cardTitleWrapper">
+                <div class="sale__cardTitle">
+                    High Coziness
+                </div>
+                <div class="sale__cardSale">
+                    UPTO 50% OFF
+                </div>
+            </div>
+            <a class="sale__cardLink" href="#">
+                Explore Items
+            </a>
+        </div>
+    </section>
+
+    <section class="section newarrival">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                New Arrival
+            </div>
+        </div>
+
+        <div class="newarrival__contentWrapper">
+            <div class="swiper newarrival__swiper">
+
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide newarrival__block">
+                        <img src="images/newarrival.jpg" alt="" class="newarrival__blockImage" loading="lazy">
+                        <div class="newarrival__blockTitle">
+                            Knitted Joggers
+                        </div>
+                    </a>
+                </div>
+                <!-- If we need pagination -->
+            </div>
+
+            <div class="swiper-scrollbar newArrivalScrollbar"></div>
+
+            <div class="swiper-button-prev newarrivalPrev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="swiper-button-next newarrivalNext">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section saving">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                Big Saving Zone
+            </div>
+        </div>
+        <div class="saving__content">
+            <div class="saving__block">
+                <img src="images/saving.jpg" alt="" class="saving__blockImage" loading="lazy">
+                <div class="saving__blockContent">
+                    <div class="saving__blockTitle">
+                        Hawaiian Shirts
+                    </div>
+
+                    <div class="saving__blockDescriptionWrapper">
+                        <div class="saving__blockDescription">
+                            Dress up in summer vibe
+                        </div>
+                        <div class="saving__blockSale">
+                            UPTO 50% OFF
+                        </div>
+                    </div>
+
+                    <div class="saving__blockButtonWrapper">
+                        <div class="saving__blockArrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <a href="#" class="saving__blockButton">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="saving__block">
+                <img src="images/saving.jpg" alt="" class="saving__blockImage" loading="lazy">
+                <div class="saving__blockContent">
+                    <div class="saving__blockTitle">
+                        Hawaiian Shirts
+                    </div>
+
+                    <div class="saving__blockDescriptionWrapper">
+                        <div class="saving__blockDescription">
+                            Dress up in summer vibe
+                        </div>
+                        <div class="saving__blockSale">
+                            UPTO 50% OFF
+                        </div>
+                    </div>
+
+                    <div class="saving__blockButtonWrapper">
+                        <div class="saving__blockArrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <a href="#" class="saving__blockButton">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="saving__block">
+                <img src="images/saving.jpg" alt="" class="saving__blockImage" loading="lazy">
+                <div class="saving__blockContent">
+                    <div class="saving__blockTitle">
+                        Hawaiian Shirts
+                    </div>
+
+                    <div class="saving__blockDescriptionWrapper">
+                        <div class="saving__blockDescription">
+                            Dress up in summer vibe
+                        </div>
+                        <div class="saving__blockSale">
+                            UPTO 50% OFF
+                        </div>
+                    </div>
+
+                    <div class="saving__blockButtonWrapper">
+                        <div class="saving__blockArrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <a href="#" class="saving__blockButton">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="saving__block">
+                <img src="images/saving.jpg" alt="" class="saving__blockImage" loading="lazy">
+                <div class="saving__blockContent">
+                    <div class="saving__blockTitle">
+                        Hawaiian Shirts
+                    </div>
+
+                    <div class="saving__blockDescriptionWrapper">
+                        <div class="saving__blockDescription">
+                            Dress up in summer vibe
+                        </div>
+                        <div class="saving__blockSale">
+                            UPTO 50% OFF
+                        </div>
+                    </div>
+
+                    <div class="saving__blockButtonWrapper">
+                        <div class="saving__blockArrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <a href="#" class="saving__blockButton">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="saving__block">
+                <img src="images/saving.jpg" alt="" class="saving__blockImage" loading="lazy">
+                <div class="saving__blockContent">
+                    <div class="saving__blockTitle">
+                        Hawaiian Shirts
+                    </div>
+
+                    <div class="saving__blockDescriptionWrapper">
+                        <div class="saving__blockDescription">
+                            Dress up in summer vibe
+                        </div>
+                        <div class="saving__blockSale">
+                            UPTO 50% OFF
+                        </div>
+                    </div>
+
+                    <div class="saving__blockButtonWrapper">
+                        <div class="saving__blockArrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <a href="#" class="saving__blockButton">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card advertising">
+        <div class="advertising__content">
+            <img src="images/advertising_background.jpg" alt="" class="advertising__contentImage" loading="lazy">
+            <div class="advertising__contentTitle">
+                WE MADE YOUR EVERYDAY FASHION BETTER!
+            </div>
+            <div class="advertising__contentDescription">
+                In our journey to improve everyday fashion,
+                euphoria presents EVERYDAY wear range - Comfortable &
+                Affordable fashion 24/7
+            </div>
+            <a href="#" class="advertising__contentButton">
+                Shop Now
+            </a>
+        </div>
+        <img class="advertising__image" src="images/advertising_image.jpg" loading="lazy">
+    </section>
+
+    <section class="section categories">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                Categories For Men
+            </div>
+        </div>
+        <div class="categories__contentWrapper">
+            <div class="swiper categoryMen__swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-scrollbar categoryMenScrollbar"></div>
+
+            <button class="swiper-button-prev menCategoryPrev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <button class="swiper-button-next menCategoryNext">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="section categories">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                Categories For Women
+            </div>
+        </div>
+        <div class="categories__contentWrapper">
+            <div class="swiper categoryWomen__swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide categories__block block">
+                        <div class="categories__blockContent">
+                            <img src="images/categories2.jpg" alt="" class="categories__blockPhoto" loading="lazy">
+                            <div class="categories__blockDescription">
+                                <div class="categories__blockTitle">
+                                    <div class="categories__blockTitleName">
+                                        Shirts
+                                    </div>
+                                    <div class="categories__blockTitleSubname">
+                                        Explore Now!
+                                    </div>
+                                </div>
+                                <div class="categories__blockArrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-scrollbar categoryWomenScrollbar"></div>
+            <button class="swiper-button-prev womenCategoryPrev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="swiper-button-next womenCategoryNext">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="card brands">
+        <div class="brands__header">
+            <div class="brands__title">
+                Top Brands Deal
+            </div>
+            <div class="brands__description">
+                Up To <span>60%</span> off on brands
+            </div>
+        </div>
+        <div class="brands__content">
+            <a href="#" class="brands__card">
+                <img src="images/brand.svg" alt="" class="brands__cardImage" loading="lazy">
+            </a>
+            <a href="#" class="brands__card">
+                <img src="images/brand.svg" alt="" class="brands__cardImage" loading="lazy">
+            </a>
+            <a href="#" class="brands__card">
+                <img src="images/brand.svg" alt="" class="brands__cardImage" loading="lazy">
+            </a>
+            <a href="#" class="brands__card">
+                <img src="images/brand.svg" alt="" class="brands__cardImage" loading="lazy">
+            </a>
+            <a href="#" class="brands__card">
+                <img src="images/brand.svg" alt="" class="brands__cardImage" loading="lazy">
+            </a>
+        </div>
+    </section>
+
+    <section class="section limelight">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                In The Limelight
+            </div>
+        </div>
+        <div class="limelight__contentWrapper">
+            <div class="swiper limelight__swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide limelight__block">
+                        <div class="limelight__blockContent">
+                            <div class="limelight__addToWishlistButton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="images/in_the_limelight.jpg" alt="" class="limelight__blockPhoto" loading="lazy">
+                            <div class="limelight__blockDescription">
+                                <div class="limelight__blockTitle">
+                                    <div class="limelight__blockTitleName">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="limelight__blockTitleBrand">
+                                        Jhanvi’s Brand
+                                    </div>
+                                </div>
+                                <div class="limelight__blockPrice">
+                                    $123.00
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-scrollbar limelightScrollbar"></div>
+            <button class="swiper-button-prev limelightPrev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="swiper-button-next limelightNext">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+    </section>
+
+    <section class="section feedback">
+        <div class="section__title">
+            <div class="section__titleMarker"></div>
+            <div class="section__titleText">
+                Feedback
+            </div>
+        </div>
+        <!-- Slider main container -->
+        <div class="feedback__contentWrapper">
+
+            <div class="swiper feedback__swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide feedback__block">
+                        <div class="feedback__blockHeader">
+                            <img src="./images/feedback_photo.jpg" alt="" class="feedback__blockPhoto" loading="lazy">
+                            <div class="feedback__blockRating">
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                                <i class="fa-regular fa-light fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feedback__blockName">
+                            Floyd Miles
+                        </div>
+                        <div class="feedback__blockText">
+                            <p>
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                                consequat duis enim velit mollit.
+                            </p>
+                            <p>
+                                Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco
+                                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <button class="swiper-button-prev feedbackPrev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="swiper-button-next feedbackNext">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+
+    <div class="footer__content-wrapper">
+        <div class="footer__contentMobile">
+            <div class="footer__columns">
+                <div class="footer__block">
+                    <div class="footer__title">
+                        Need help
+                    </div>
+                    <ul class="footer__blockContent">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <div class="footer__title">
+                        Company
+                    </div>
+                    <ul class="footer__blockContent">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">euphoria Blog</a></li>
+                        <li><a href="#">euphoriastan</a></li>
+                        <li><a href="#">Collaboration</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer__block">
+                    <div class="footer__title">
+                        More Info
+                    </div>
+                    <ul class="footer__blockContent">
+                        <li><a href="#">Term and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__block">
+                <div class="footer__title">
+                    Location
+                </div>
+                <ul class="footer__blockContent">
+                    <li><a href="mailto:">support@euphoria.in</a></li>
+                    <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+                    <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+                </ul>
+            </div>
+
+            <div class="footer__socialLinks">
+                <a href="#">
+                    <img src="images/facebook_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/instagram_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/twitter_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/linkedin_icon.svg" alt="">
+                </a>
+            </div>
+            <div class="footer__downloadLinks">
+                <div class="footer__title">
+                    Download application
+                </div>
+                <a href="#">
+                    <img src="images/playmarket_button.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/appstore_button.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__contentDesktop">
+            <div class="footer__block">
+                <div class="footer__title">
+                    Need help
+                </div>
+                <ul class="footer__blockContent">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <div class="footer__title">
+                    Company
+                </div>
+                <ul class="footer__blockContent">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">euphoria Blog</a></li>
+                    <li><a href="#">euphoriastan</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Media</a></li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <div class="footer__title">
+                    More Info
+                </div>
+                <ul class="footer__blockContent">
+                    <li><a href="#">Term and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <div class="footer__title">
+                    Location
+                </div>
+                <ul class="footer__blockContent">
+                    <li><a href="mailto:">support@euphoria.in</a></li>
+                    <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+                    <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+                </ul>
+            </div>
+
+            <div class="footer__socialLinks">
+                <a href="#">
+                    <img src="images/facebook_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/instagram_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/twitter_icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/linkedin_icon.svg" alt="">
+                </a>
+            </div>
+            <div class="footer__downloadLinks">
+                <div class="footer__title">
+                    Download application
+                </div>
+                <a href="#">
+                    <img src="images/playmarket_button.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/appstore_button.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__popularCategories">
+            <div class="footer__title">
+                Popular Categories
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="footer__copyright">
+            Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://kit.fontawesome.com/fed00610f6.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script defer src="js/swiper.js"></script>
+<script defer src="js/header.js"></script>
+
+</body>
+</html>

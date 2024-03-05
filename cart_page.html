@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="css/cart_page.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__contentWrapper">
+    <a href="#">
+      <img src="images/logo.svg"
+           alt="Euphoria logo."
+           class="logo header__logo"
+      >
+    </a>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__element">
+          <a href="#">
+            Shop
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Men
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Women
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Combos
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Joggers
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <label class="search">
+      <i class="search__icon fa-solid fa-magnifying-glass"></i>
+
+      <input type="text"
+             placeholder="Search"
+             class="search__input"
+      >
+    </label>
+
+    <div class="header__buttons">
+
+      <a href="#"
+         class="wishlist-button button"
+      >
+        <i class="fa-regular fa-heart"></i>
+      </a>
+
+      <a href="#"
+         class="profile-button button"
+      >
+        <i class="fa-regular fa-user"></i>
+      </a>
+
+      <a href="#"
+         class="cart-button button"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+
+    </div>
+
+    <button id="showHidden" class="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="hiddenContent" class="hiddenContent">
+
+      <div id="hiddenButtons" class="hiddenButtons">
+        <a href="#">
+          Wishlist
+        </a>
+
+        <a href="#">
+          Profile
+        </a>
+
+        <a href="#">
+          Cart
+        </a>
+      </div>
+
+      <hr>
+
+      <nav id="hiddenNav" class="hiddenNav">
+        <ul class="hiddenNav__list">
+          <li class="hiddenNav__element">
+            <a href="#">
+              Shop
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Men
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Women
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Combos
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Joggers
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <section class="section">
+    <div class="content-wrapper">
+
+      <div class="path">
+
+        <div class="path__element">
+          Home
+        </div>
+
+        <div class="path__element">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="path__element">
+          Add To Cart
+        </div>
+
+      </div>
+
+      <div class="info">
+        <p>
+          Please fill in the fields below and click
+          place order to complete your purchase!
+        </p>
+        <p>
+          Already registered?
+          <a href="#">
+            Please log in here
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="table__wrapper">
+    <table class="table">
+
+      <thead>
+        <tr class="table__header">
+          <th>PRODUCT DETAILS</th>
+          <th>PRICE</th>
+          <th>QUANTITY</th>
+          <th>SHIPPING</th>
+          <th>SUBTOTAL</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr class="table__item">
+
+          <td class="table__itemDetails">
+            <div class="details">
+
+              <div class="details__photo photo-wrapper">
+                <img src="/images/in_the_limelight.jpg" alt="Product photo.">
+              </div>
+
+              <div class="details__content">
+
+                <h2 class="details__contentTitle">
+                  Blue Flower Print Crop Top
+                </h2>
+
+                <div class="details__contentDescription">
+
+                  <p>
+                    Color : Yellow
+                  </p>
+
+                  <p>
+                    Size : M
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+          </td>
+
+          <td class="table__itemPrice">
+            $29.00
+          </td>
+
+          <td class="table__itemQuantity">
+            <div class="quantity">
+
+              <div class="quantity__content">
+
+                <div class="quantity__decrease">
+                  -
+                </div>
+
+                <label>
+                  <input class="quantity__count" type="text" value="2" readonly>
+                </label>
+
+                <div class="quantity__increase">
+                  +
+                </div>
+
+              </div>
+
+            </div>
+          </td>
+
+          <td class="table__itemShipping">
+            FREE
+          </td>
+
+          <td class="table__itemSubtotal">
+            $29.00
+          </td>
+
+          <td class="table__itemAction">
+            <div class="actions">
+
+              <div class="actions__delete">
+                <span>
+                  Remove from cart
+                </span>
+                <i class="fa-regular fa-trash-can"></i>
+              </div>
+
+            </div>
+          </td>
+
+        </tr>
+
+        <tr class="table__item">
+
+          <td class="table__itemDetails">
+            <div class="details">
+
+              <div class="details__photo photo-wrapper">
+                <img src="/images/in_the_limelight.jpg" alt="Product photo.">
+              </div>
+
+              <div class="details__content">
+
+                <h2 class="details__contentTitle">
+                  Blue Flower Print Crop Top
+                </h2>
+
+                <div class="details__contentDescription">
+
+                  <p>
+                    Color : Yellow
+                  </p>
+
+                  <p>
+                    Size : M
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+          </td>
+
+          <td class="table__itemPrice">
+            $29.00
+          </td>
+
+          <td class="table__itemQuantity">
+            <div class="quantity">
+
+              <div class="quantity__content">
+
+                <div class="quantity__decrease">
+                  -
+                </div>
+
+                <label>
+                  <input class="quantity__count" type="text" value="2" readonly>
+                </label>
+
+                <div class="quantity__increase">
+                  +
+                </div>
+
+              </div>
+
+            </div>
+          </td>
+
+          <td class="table__itemShipping">
+            FREE
+          </td>
+
+          <td class="table__itemSubtotal">
+            $29.00
+          </td>
+
+          <td class="table__itemAction">
+            <div class="actions">
+
+              <div class="actions__delete">
+                <span>
+                  Remove from cart
+                </span>
+                <i class="fa-regular fa-trash-can"></i>
+              </div>
+
+            </div>
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+  </section>
+
+  <section class="discount">
+
+    <div class="codes">
+
+      <div class="codes__header">
+
+        <div class="codes__title">
+          Discount Codes
+        </div>
+
+        <div class="codes__subtitle">
+          Enter your coupon code if you have one
+        </div>
+
+      </div>
+
+      <div class="codes__coupon">
+
+        <label>
+          <input type="text">
+        </label>
+
+        <button class="codes__couponApply">
+          Apply Coupon
+        </button>
+
+      </div>
+
+      <button class="codes__continue">
+        Continue Shopping
+      </button>
+
+    </div>
+
+    <div class="checkout">
+
+      <div class="checkout__sub">
+
+        <div class="sub-total">
+          <div class="text">
+            Sub Total
+          </div>
+
+          <div class="price">
+            $513.00
+          </div>
+        </div>
+
+        <div class="shipping">
+          <div class="text">
+            Shipping
+          </div>
+
+          <div class="price">
+            $5.00
+          </div>
+        </div>
+
+      </div>
+
+      <div class="checkout__grand">
+        <div class="text">
+          Grand Total
+        </div>
+
+        <div class="price">
+          $518.00
+        </div>
+      </div>
+
+      <hr>
+
+      <button class="proceed">
+        Proceed To Checkout
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer__content-wrapper">
+    <div class="footer__contentMobile">
+      <div class="footer__columns">
+        <div class="footer__block">
+          <div class="footer__title">
+            Need help
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            Company
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">euphoria Blog</a></li>
+            <li><a href="#">euphoriastan</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            More Info
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Term and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__contentDesktop">
+      <div class="footer__block">
+        <div class="footer__title">
+          Need help
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Company
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">euphoria Blog</a></li>
+          <li><a href="#">euphoriastan</a></li>
+          <li><a href="#">Collaboration</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          More Info
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Term and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__popularCategories">
+      <div class="footer__title">
+        Popular Categories
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="footer__copyright">
+      Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+    </div>
+  </div>
+
+</footer>
+
+<script defer src="https://kit.fontawesome.com/fed00610f6.js" crossorigin="anonymous"></script>
+<script defer src="js/header.js"></script>
+<script defer src="js/quantity.js"></script>
+
+</body>
+</html>

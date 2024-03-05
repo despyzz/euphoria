@@ -1,0 +1,36 @@
+@import "default";
+@import "blocks/header";
+@import "blocks/footer";
+
+main {
+  height: calc(100vh - $headerMobileHeight);
+
+  @include media($notebook) {
+    height: calc(100vh - $headerNotebookHeight);
+  }
+
+  @include media($desktop) {
+    height: calc(100vh - $headerDesktopHeight);
+  }
+}
+
+.confirmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 3rem;
+
+  &__imgWrapper {
+    width: 100%;
+    max-width: fit-content;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

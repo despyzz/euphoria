@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products List Page</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="libs/nouislider/nouislider.css" >
+  <link rel="stylesheet" href="css/products_list.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__contentWrapper">
+    <a href="#">
+      <img src="images/logo.svg"
+           alt="Euphoria logo."
+           class="logo header__logo"
+      >
+    </a>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__element">
+          <a href="#">
+            Shop
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Men
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Women
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Combos
+          </a>
+        </li>
+
+        <li class="nav__element">
+          <a href="#">
+            Joggers
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <label class="search">
+      <i class="search__icon fa-solid fa-magnifying-glass"></i>
+
+      <input type="text"
+             placeholder="Search"
+             class="search__input"
+      >
+    </label>
+
+    <div class="header__buttons">
+
+      <a href="#"
+         class="wishlist-button button"
+      >
+        <i class="fa-regular fa-heart"></i>
+      </a>
+
+      <a href="#"
+         class="profile-button button"
+      >
+        <i class="fa-regular fa-user"></i>
+      </a>
+
+      <a href="#"
+         class="cart-button button"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+
+    </div>
+
+    <button id="showHidden" class="button">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="hiddenContent" class="hiddenContent">
+
+      <div id="hiddenButtons" class="hiddenButtons">
+        <a href="#">
+          Wishlist
+        </a>
+
+        <a href="#">
+          Profile
+        </a>
+
+        <a href="#">
+          Cart
+        </a>
+      </div>
+
+      <hr>
+
+      <nav id="hiddenNav" class="hiddenNav">
+        <ul class="hiddenNav__list">
+          <li class="hiddenNav__element">
+            <a href="#">
+              Shop
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Men
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Women
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Combos
+            </a>
+          </li>
+
+          <li class="hiddenNav__element">
+            <a href="#">
+              Joggers
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </nav>
+
+  </div>
+</header>
+
+<main>
+  <section class="section catalog">
+    <div class="catalog__filter">
+      <div class="catalog__filterHeader catalog__block">
+        <div class="catalog__filterHeaderText">
+          Filter
+        </div>
+        <div id="catalogDirection" class="catalog__filterHeaderIcon">
+          <i id="directionUp" class="fa-solid fa-arrow-up-wide-short"></i>
+          <i id="directionDown" class="fa-solid fa-arrow-down-short-wide"></i>
+        </div>
+        <input id="catalogDirectionInput"
+               name="catalogDirection"
+               type="hidden">
+      </div>
+
+      <div class="catalog__filterCategories catalog__block">
+        <div class="catalog__filterCategoriesItem">
+          <div class="catalog__filterCategoriesItemName">
+            Tops
+          </div>
+          <div class="catalog__filterCategoriesItemIcon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterCategoriesItem">
+          <div class="catalog__filterCategoriesItemName">
+            Tops
+          </div>
+          <div class="catalog__filterCategoriesItemIcon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterCategoriesItem">
+          <div class="catalog__filterCategoriesItemName">
+            Tops
+          </div>
+          <div class="catalog__filterCategoriesItemIcon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterCategoriesItem">
+          <div class="catalog__filterCategoriesItemName">
+            Tops
+          </div>
+          <div class="catalog__filterCategoriesItemIcon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__filterPrice catalog__block main-block">
+        <div class="catalog__filterPriceTitle catalog__block main-block__title">
+          <div class="catalog__filterPriceTitleText">
+            Price
+          </div>
+          <div class="catalog__filterPriceTitleIcon">
+            <i class="fa-solid fa-chevron-up"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterPriceRange main-block__content">
+          <div id="priceSlider" class="catalog__filterPriceRangeSlider">
+          </div>
+
+          <div class="catalog__filterPriceRangeFromTo">
+
+            <label class="catalog__filterPriceRangeFrom">
+              <span>$</span>
+              <input id="inputFrom" type="number" placeholder="0">
+            </label>
+
+            <label class="catalog__filterPriceRangeTo">
+              <span>$</span>
+              <input id="inputTo" type="number" placeholder="9999">
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__filterColors catalog__block main-block">
+        <div class="catalog__filterColorsTitle catalog__block main-block__title">
+          <div class="catalog__filterColorsTitleText">
+            Colors
+          </div>
+          <div class="catalog__filterColorsTitleIcon">
+            <i class="fa-solid fa-chevron-up"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterColorsSelector main-block__content">
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+          <div class="catalog__filterColorsSelectorItem">
+            <div class="catalog__filterColorsSelectorItemRectangle" style="background-color: purple"></div>
+            <div class="catalog__filterColorsSelectorItemTitle">
+              Purple
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__filterSize catalog__block main-block">
+        <div class="catalog__filterSizeTitle catalog__block main-block__title">
+          <div class="catalog__filterSizeTitleText">
+            Size
+          </div>
+          <div class="catalog__filterSizeTitleIcon">
+            <i class="fa-solid fa-chevron-up"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterSizeSelector main-block__content">
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+          <div class="catalog__filterSizeSelectorItem">
+            XXS
+          </div>
+
+        </div>
+      </div>
+
+      <div class="catalog__filterStyle catalog__block main-block">
+        <div class="catalog__filterStyleTitle catalog__block main-block__title">
+          <div class="catalog__filterStyleTitleText">
+            Dress Style
+          </div>
+          <div class="catalog__filterStyleTitleIcon">
+            <i class="fa-solid fa-chevron-up"></i>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="catalog__filterStyleSelector main-block__content">
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="catalog__filterStyleSelectorItem">
+            <div class="catalog__filterStyleSelectorItemName">
+              Classic
+            </div>
+            <div class="catalog__filterStyleSelectorItemIcon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="catalog__products">
+      <div class="catalog__productsHeader">
+        <div class="catalog__productsHeaderCategory">
+          Women`s Clothing
+        </div>
+
+        <div class="catalog__productsHeaderNewRecommended">
+          <div class="catalog__productsHeaderNew">
+            New
+          </div>
+
+          <div class="catalog__productsHeaderRecommended">
+            Recommended
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog__productsContent">
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="productBlock">
+          <div class="productBlock__Content">
+
+            <div class="productBlock__PhotoWrapper">
+              <div class="productBlock__addToWishlistButton">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+
+              <img src="images/in_the_limelight.jpg" alt="" class="productBlock__Photo">
+            </div>
+
+            <div class="productBlock__Description">
+              <div class="productBlock__Title">
+                <div class="productBlock__TitleName">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+
+                <div class="productBlock__TitleSubname">
+                  Jhanvi’s Brand
+                </div>
+              </div>
+
+              <div class="productBlock__Price">
+                $123.00
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section article">
+    <div class="section__title">
+      <div class="section__titleMarker"></div>
+      <div class="section__titleText">
+        Clothing for Women Online in India
+      </div>
+    </div>
+
+    <div class="article__content">
+      <p>
+        <span>
+          Reexplore Women's Clothing Collection Online at Euphoria
+        </span>
+      </p>
+
+      <p>
+        Women's Clothing – Are you searching for the best website to buy Clothing for Women online in India?
+        Well, your search for the coolest and most stylish womens clothing ends here. From trendy Casual
+        Womens Wear Online shopping to premium quality cotton women's apparel,
+        <span>
+          Euphoria
+        </span>
+        has closet of Women Collection covered with the latest and best designs of Women's Clothing Online.
+      </p>
+
+      <p>
+        Our collection of clothes for women will make you the trendsetter with an iconic resemblance of
+        choice in Womens Wear.
+      </p>
+
+      <p>
+        <span>
+          One-Stop Destination to Shop Every Clothing for Women: Euphoria
+        </span>
+      </p>
+
+      <p>
+        Today, Clothing for Women is gaining more popularity above all. This is because gone are the days
+        when women were used to carrying uncomfortable fashion. Today, a lady looks prettier when she is in
+        Casual Womens Wear which is a comfortable outfit. Concerning this,
+        <span>
+          Euphoria
+        </span>
+        has a big fat range of Stylish Women's Clothing that would make her the winner wherever she goes.
+      </p>
+
+      <p>
+        Our collection of clothes for women will make you the trendsetter with an iconic resemblance of
+        choice in Womens Wear. It is quite evident to say that there are very few Womens Clothing online
+        stores where you can buy Western Wear for Women comprising the premium material and elegant design
+        that you are always seeking for. Basically,
+      </p>
+
+      <div class="article__contentSeeMore">
+        See More
+      </div>
+    </div>
+  </section>
+
+  <section class="section section__table">
+    <div class="section__title">
+      <div class="section__titleMarker"></div>
+
+      <div class="section__titleText">
+        Buy Women's Clothing at Best Price
+      </div>
+    </div>
+
+    <div class="table__wrapper">
+      <table class="table">
+        <tr>
+          <td class="title">Women's Clothing</td>
+          <td class="price">Best Price</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">
+            Pick Any 4- Womens Plain T-shirt Combo
+          </td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+
+        <tr>
+          <td class="title">Pick Any 4- Womens Plain T-shirt Combo</td>
+          <td class="price">₹1099</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="footer__content-wrapper">
+    <div class="footer__contentMobile">
+      <div class="footer__columns">
+        <div class="footer__block">
+          <div class="footer__title">
+            Need help
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            Company
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">euphoria Blog</a></li>
+            <li><a href="#">euphoriastan</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer__block">
+          <div class="footer__title">
+            More Info
+          </div>
+          <ul class="footer__blockContent">
+            <li><a href="#">Term and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__contentDesktop">
+      <div class="footer__block">
+        <div class="footer__title">
+          Need help
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Company
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">euphoria Blog</a></li>
+          <li><a href="#">euphoriastan</a></li>
+          <li><a href="#">Collaboration</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          More Info
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="#">Term and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer__block">
+        <div class="footer__title">
+          Location
+        </div>
+        <ul class="footer__blockContent">
+          <li><a href="mailto:">support@euphoria.in</a></li>
+          <li class="selectable">Eklingpura Chouraha, Ahmedabad Main Road</li>
+          <li class="selectable">(NH 8- Near Mahadev Hotel) Udaipur, India-313002</li>
+        </ul>
+      </div>
+
+      <div class="footer__socialLinks">
+        <a href="#">
+          <img src="images/facebook_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/twitter_icon.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin_icon.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__downloadLinks">
+        <div class="footer__title">
+          Download application
+        </div>
+        <a href="#">
+          <img src="images/playmarket_button.svg" alt="">
+        </a>
+        <a href="#">
+          <img src="images/appstore_button.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__popularCategories">
+      <div class="footer__title">
+        Popular Categories
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div class="footer__copyright">
+      Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
+    </div>
+  </div>
+
+</footer>
+
+<script src="https://kit.fontawesome.com/fed00610f6.js"
+        crossorigin="anonymous"></script>
+<script src="libs/nouislider/nouislider.js"></script>
+
+<script src="js/priceSlider.js"></script>
+<script src="js/catalogFilter.js"></script>
+<script defer src="js/header.js"></script>
+
+</body>
+</html>
